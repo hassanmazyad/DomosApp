@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import {Backend} from "../utils/Backend";
+import React from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Paper from '@mui/material/Paper';
