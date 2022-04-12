@@ -7,6 +7,7 @@ import {useEffect, useState} from "react";
 import {Backend} from "../utils/Backend";
 import Alert from '@mui/material/Alert';
 import LinearProgress from '@mui/material/LinearProgress';
+import {Typography} from "@mui/material";
 
 export default function Page() {
     const [words, setWords] = useState([]);
@@ -39,19 +40,22 @@ export default function Page() {
                 flexDirection: 'column',
             }}
         >
-            <Box mt={5}>
+            <Box>
+                <Typography variant="h3"> Hassan Mazyad Test Technique </Typography>
+            </Box>
+            <Box mt={3}>
                 <WordInput setNewWord={setNewWord} error={error}/>
             </Box>
-            <Box mt={5}>
+            <Box mt={3}>
                 <WordAddButton newWord={newWord} setWords={setWords} setError={setError} setSuccess={setSuccess} setLoading={setLoading}/>
             </Box>
-            {loading && <Box mt={5} sx={{width: '30%'}}>
+            {loading && <Box mt={3} sx={{width: '30%'}}>
                 <LinearProgress/>
             </Box>}
-            {words && <Box mt={5}>
+            {words && <Box mt={3}>
                 <WordsList words={words}/>
             </Box>}
-            {success && <Box mt={5}>
+            {success && <Box mt={3}>
                 <Alert severity="success">the new word has been added</Alert>
             </Box>}
 
